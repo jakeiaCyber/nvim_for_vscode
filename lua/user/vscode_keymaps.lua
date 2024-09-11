@@ -25,6 +25,16 @@ keymap("n", "L", "$",opts)
 
 -- removes highlighting after escaping vim search
 keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
+
+-- split window
+keymap({"n", "v"}, "ss", "<cmd>lua require('vscode').action('workbench.action.splitEditor')<CR>")
+keymap({"n", "v"}, "sv", "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
+
+-- navigate window
+keymap({"n", "v"}, "sh", "<cmd>lua require('vscode').action('workbench.action.navigateLeft')<CR>")
+keymap({"n", "v"}, "sl", "<cmd>lua require('vscode').action('workbench.action.navigateRight')<CR>")
+keymap({"n", "v"}, "sj", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
+keymap({"n", "v"}, "sk", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
 -- general keymaps
 keymap({"n", "v"}, "<leader>t", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
 keymap({"n", "v"}, "<leader>b", "<cmd>lua require('vscode').action('editor.debug.action.toggleBreakpoint')<CR>")
@@ -38,8 +48,13 @@ keymap({"n", "v"}, "<leader>fd", "<cmd>lua require('vscode').action('editor.acti
 keymap({"n", "v"}, "<leader>e", "<cmd>lua require('vscode').action('workbench.files.action.focusFilesExplorer')<CR>")
 keymap({"n", "v"}, "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
 keymap({"n", "v"}, "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
+keymap({"n", "v"}, "<leader>c", "<cmd>Tabclose<CR>")
+keymap({"n", "v"}, "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
 
 -- project manager keymaps
 keymap({"n", "v"}, "<leader>pa", "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>")
 keymap({"n", "v"}, "<leader>po", "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>")
 keymap({"n", "v"}, "<leader>pe", "<cmd>lua require('vscode').action('projectManager.editProjects')<CR>")
+
+-- dynoFileUtils keymaps
+keymap({"n", "v"}, "<leader>na", "<cmd>lua require('vscode').action('dynoFileUtils.newItems')<CR>")
