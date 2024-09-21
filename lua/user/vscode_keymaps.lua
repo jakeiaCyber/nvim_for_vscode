@@ -9,6 +9,7 @@ vim.g.maplocalleader = " "
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
+keymap("n", ";", ":")
 -- better indent handling
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
