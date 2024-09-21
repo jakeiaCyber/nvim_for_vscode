@@ -48,7 +48,7 @@ keymap({"n", "v"}, "<leader>fd", "<cmd>lua require('vscode').action('editor.acti
 keymap({"n", "v"}, "<leader>e", "<cmd>lua require('vscode').action('workbench.files.action.focusFilesExplorer')<CR>")
 keymap({"n", "v"}, "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
 keymap({"n", "v"}, "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
-keymap({"n", "v"}, "<leader>c", "<cmd>Tabclose<CR>")
+keymap({"n", "v"}, "<leader>q", "<cmd>Tabclose<CR>")
 keymap({"n", "v"}, "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
 
 -- project manager keymaps
