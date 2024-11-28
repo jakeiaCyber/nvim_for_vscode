@@ -8,6 +8,8 @@ vim.g.maplocalleader = " "
 
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
+-- cmdheight
+vim.opt.cmdheight = 1
 
 keymap("n", ";", ":")
 -- better indent handling
@@ -28,14 +30,14 @@ keymap("n", "L", "$", opts)
 keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
 
 -- split window
-keymap({ "n", "v" }, "ss", "<cmd>lua require('vscode').action('workbench.action.splitEditor')<CR>")
-keymap({ "n", "v" }, "sv", "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
+keymap({ "n", "v" }, "\\", "<cmd>lua require('vscode').action('workbench.action.splitEditor')<CR>")
+keymap({ "n", "v" }, "|", "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
 
 -- navigate window
-keymap({ "n", "v" }, "sh", "<cmd>lua require('vscode').action('workbench.action.navigateLeft')<CR>")
-keymap({ "n", "v" }, "sl", "<cmd>lua require('vscode').action('workbench.action.navigateRight')<CR>")
-keymap({ "n", "v" }, "sj", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
-keymap({ "n", "v" }, "sk", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
+keymap({ "n", "v" }, "<C-h>", "<cmd>lua require('vscode').action('workbench.action.navigateLeft')<CR>")
+keymap({ "n", "v" }, "<C-l>", "<cmd>lua require('vscode').action('workbench.action.navigateRight')<CR>")
+keymap({ "n", "v" }, "<C-j>", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
+keymap({ "n", "v" }, "<C-k>", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
 -- general keymaps
 keymap({ "n", "v" }, "<leader>t", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
 keymap({ "n", "v" }, "<leader>db", "<cmd>lua require('vscode').action('editor.debug.action.toggleBreakpoint')<CR>")
