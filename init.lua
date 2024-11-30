@@ -1,8 +1,6 @@
 if vim.g.vscode then
-  -- VSCode Neovim
-  require "user.vscode_keymaps"
+	-- VSCode Neovim
+	require("user.vscode_keymaps")
 else
-  -- Ordinary Neovim
+	-- Ordinary Neovim
 end
-
-require("config.lazy")
