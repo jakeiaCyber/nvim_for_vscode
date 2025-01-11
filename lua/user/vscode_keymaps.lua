@@ -1,38 +1,30 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
-
 -- remap leader key
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 -- cmdheight
 vim.opt.cmdheight = 1
-
 keymap("n", ";", ":")
 -- better indent handling
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
+keymap("v", "<S-Tab>", "<gv", opts)
+keymap("v", "<Tab>", ">gv", opts)
 -- move text up and down
 keymap("v", "J", ":m .+1<CR>==", opts)
 keymap("v", "K", ":m .-2<CR>==", opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-
 -- H L -> fastmove
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
-
 -- removes highlighting after escaping vim search
 keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
-
 -- split window
 keymap({ "n", "v" }, "\\", "<cmd>lua require('vscode').action('workbench.action.splitEditor')<CR>")
 keymap({ "n", "v" }, "|", "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
-
 -- navigate window
 keymap({ "n", "v" }, "<C-h>", "<cmd>lua require('vscode').action('workbench.action.navigateLeft')<CR>")
 keymap({ "n", "v" }, "<C-l>", "<cmd>lua require('vscode').action('workbench.action.navigateRight')<CR>")
@@ -53,15 +45,12 @@ keymap({ "n", "v" }, "[d", "<cmd>lua require('vscode').action('editor.action.mar
 keymap({ "n", "v" }, "<leader>bd", "<cmd>Tabclose<CR>")
 keymap({ "n", "v"}, "<Tab>", "<cmd>Tabnext<CR>")
 keymap({ "n", "v" }, "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
-
 -- project manager keymaps
 keymap({ "n", "v" }, "<leader>pa", "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>")
 keymap({ "n", "v" }, "<leader>po", "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>")
 keymap({ "n", "v" }, "<leader>pe", "<cmd>lua require('vscode').action('projectManager.editProjects')<CR>")
-
 -- dynoFileUtils keymaps
 keymap({ "n", "v" }, "<leader>na", "<cmd>lua require('vscode').action('dynoFileUtils.newItems')<CR>")
-
 -- lsp keymaps
 keymap("n", "K", "<cmd>lua require('vscode-neovim').action('editor.action.showHover')<CR>")
 keymap("n", "gI", "<cmd>lua require('vscode-neovim').action('editor.action.goToImplementation')<CR>")
