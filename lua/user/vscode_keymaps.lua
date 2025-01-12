@@ -31,7 +31,8 @@ keymap({ "n", "v" }, "<C-l>", "<cmd>lua require('vscode').action('workbench.acti
 keymap({ "n", "v" }, "<C-j>", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
 keymap({ "n", "v" }, "<C-k>", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
 -- general keymaps
-keymap({ "n", "v" }, "<leader>t", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
+keymap({ "n", "v" }, "<leader>ft", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
+keymap({ "n", "v" }, "<leader>xx", "<cmd>lua require('vscode').action('workbench.actions.view.problems')<CR>")
 keymap({ "n", "v" }, "<leader>db", "<cmd>lua require('vscode').action('editor.debug.action.toggleBreakpoint')<CR>")
 keymap({ "n", "v" }, "<leader>sp", "<cmd>lua require('vscode').action('workbench.actions.view.problems')<CR>")
 keymap({ "n", "v" }, "<leader>cn", "<cmd>lua require('vscode').action('notifications.clearAll')<CR>")
@@ -42,7 +43,7 @@ keymap({ "n", "v" }, "<leader>cr", "<cmd>lua require('vscode').action('code-runn
 keymap({ "n", "v" }, "<leader>e", "<cmd>lua require('vscode').action('workbench.files.action.focusFilesExplorer')<CR>")
 keymap({ "n", "v" }, "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
 keymap({ "n", "v" }, "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
-keymap({ "n", "v" }, "<leader>bd", "<cmd>Tabclose<CR>")
+keymap({ "n", "v" }, "<leader>c", "<cmd>Tabclose<CR>")
 keymap({ "n", "v"}, "<Tab>", "<cmd>Tabnext<CR>")
 keymap({ "n", "v" }, "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
 -- project manager keymaps
