@@ -46,7 +46,7 @@ keymap({ "n", "v" }, "[d", "<cmd>lua require('vscode').action('editor.action.mar
 keymap({ "n", "v" }, "<leader>cc", "<cmd>Tabclose<CR>")
 keymap({ "n", "v"}, "<Tab>", "<cmd>Tabnext<CR>")
 keymap({ "n", "v" }, "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
-keymap({ "n", "v" }, "<cr>", "<cmd>lua require('vscode').action('editor.action.smartSelect.expand')<CR>")
+keymap({ "n", "v" }, "<cr>", "<cmd>lua require('vscode').action('expand_region')<CR>")
 -- project manager keymaps
 keymap({ "n", "v" }, "<leader>pa", "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>")
 keymap({ "n", "v" }, "<leader>po", "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>")
