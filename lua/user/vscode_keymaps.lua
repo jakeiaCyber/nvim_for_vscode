@@ -48,6 +48,7 @@ keymap("n", "<leader>xx", "<cmd>lua require('vscode').action('workbench.actions.
 -- tab
 keymap("n", "<leader>cc", "<cmd>Tabclose<CR>")
 keymap("n", "<Tab>", "<cmd>Tabnext<CR>")
+keymap("n", "<S-Tab>", "<cmd>Tabprev<CR>")
 -- expand keymaps
 keymap("n", "<cr>", "<cmd>lua require('vscode').action('expand_region')<CR>")
 -- project manager keymaps
