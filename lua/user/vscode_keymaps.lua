@@ -31,7 +31,7 @@ keymap("n", "<C-l>", "<cmd>lua require('vscode').action('workbench.action.naviga
 keymap("n", "<C-j>", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
 keymap("n", "<C-k>", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
 -- general keymaps
-keymap("n", "<leader>e", "<cmd>lua require('vscode').action('workbench.files.action.focusFilesExplorer')<CR>")
+keymap("n", "<leader>e", "<cmd>lua require('vscode').action('workbench.action.toggleSidebarVisibility')<CR>")
 keymap("n", "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
 keymap("n", "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
 keymap("n", "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
