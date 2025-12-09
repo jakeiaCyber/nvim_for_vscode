@@ -29,22 +29,22 @@ keymap("n", "<C-l>", "<cmd>lua require('vscode').action('workbench.action.naviga
 keymap("n", "<C-j>", "<cmd>lua require('vscode').action('workbench.action.navigateDown')<CR>")
 keymap("n", "<C-k>", "<cmd>lua require('vscode').action('workbench.action.navigateUp')<CR>")
 -- general keymaps
-keymap("n", "<leader>e", "<cmd>lua require('vscode').action('workbench.action.toggleSidebarVisibility')<CR>")
+keymap("n", "<leader>e", "<cmd>lua require('vscode').action('workbench.explorer.fileView.focus')<CR>")
 keymap("n", "<leader>w", "<cmd>lua require('vscode').action('workbench.action.files.save')<CR>")
 keymap("n", "]d", "<cmd>lua require('vscode').action('editor.action.marker.nextInFiles')<CR>")
 keymap("n", "[d", "<cmd>lua require('vscode').action('editor.action.marker.prevInFiles')<CR>")
 keymap("n", "<leader>db", "<cmd>lua require('vscode').action('editor.debug.action.toggleBreakpoint')<CR>")
 keymap("n", "<leader>cn", "<cmd>lua require('vscode').action('notifications.clearAll')<CR>")
 -- find
-keymap("n", "<leader>ff", "<cmd>lua require('vscode').action('workbench.action.quickOpen')<CR>")
-keymap("n", "<leader>fp", "<cmd>lua require('vscode').action('workbench.action.showCommands')<CR>")
-keymap("n", "<leader>ft", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
-keymap("n", "<leader>fw", [[<cmd>lua require('vscode').action('workbench.action.findInFiles', { args = { query = vim.fn.expand("<cword>") } })<CR>]])
+keymap("n", "<leader>f", "<cmd>lua require('vscode').action('workbench.action.quickOpen')<CR>")
+keymap("n", "<leader>p", "<cmd>lua require('vscode').action('workbench.action.showCommands')<CR>")
+keymap("n", "<leader>t", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
+keymap("n", "<leader>s", [[<cmd>lua require('vscode').action('workbench.action.findInFiles', { args = { query = vim.fn.expand("<cword>") } })<CR>]])
 -- tab
 keymap("n", "<Tab>", "<cmd>Tabnext<CR>")
 keymap("n", "<S-Tab>", "<cmd>Tabprev<CR>")
 -- lsp keymaps
 keymap("n", "<Leader>la", "<cmd>lua require('vscode-neovim').action('editor.action.quickFix')<CR>")
 keymap("n", "<Leader>ll", "<cmd>lua require('vscode-neovim').action('workbench.action.showAllSymbols')<CR>")
-keymap("n", "<Leader>fr", "<cmd>lua require('vscode-neovim').action('editor.action.goToReferences')<CR>")
+keymap("n", "<Leader>lf", "<cmd>lua require('vscode-neovim').action('editor.action.goToReferences')<CR>")
 keymap("n", "<Leader>lr", "<cmd>lua require('vscode-neovim').action('editor.action.rename')<CR>")
