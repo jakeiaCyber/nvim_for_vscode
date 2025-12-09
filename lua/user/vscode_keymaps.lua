@@ -20,8 +20,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- H L -> fastmove
 keymap("n", "H", "^", opts)
 keymap("n", "L", "$", opts)
--- removes highlighting after escaping vim search
-keymap("n", "<Esc>", "<Esc>:noh<CR>", opts)
 -- split window
 keymap("n", "\\", "<cmd>lua require('vscode').action('workbench.action.splitEditor')<CR>")
 keymap("n", "|", "<cmd>lua require('vscode').action('workbench.action.splitEditorDown')<CR>")
