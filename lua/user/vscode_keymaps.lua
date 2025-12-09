@@ -39,36 +39,14 @@ keymap("n", "<leader>db", "<cmd>lua require('vscode').action('editor.debug.actio
 keymap("n", "<leader>cn", "<cmd>lua require('vscode').action('notifications.clearAll')<CR>")
 -- find
 keymap("n", "<leader>ff", "<cmd>lua require('vscode').action('workbench.action.quickOpen')<CR>")
-keymap("n", "<leader>fw", "<cmd>lua require('vscode').action('workbench.action.quickTextSearch')<CR>")
 keymap("n", "<leader>fp", "<cmd>lua require('vscode').action('workbench.action.showCommands')<CR>")
 keymap("n", "<leader>ft", "<cmd>lua require('vscode').action('workbench.action.terminal.toggleTerminal')<CR>")
-keymap("n", "<leader>fc", [[<cmd>lua require('vscode').action('workbench.action.findInFiles', { args = { query = vim.fn.expand("<cword>") } })<CR>]])
--- problem
-keymap("n", "<leader>xx", "<cmd>lua require('vscode').action('workbench.actions.view.problems')<CR>")
+keymap("n", "<leader>fw", [[<cmd>lua require('vscode').action('workbench.action.findInFiles', { args = { query = vim.fn.expand("<cword>") } })<CR>]])
 -- tab
-keymap("n", "<leader>cc", "<cmd>Tabclose<CR>")
 keymap("n", "<Tab>", "<cmd>Tabnext<CR>")
 keymap("n", "<S-Tab>", "<cmd>Tabprev<CR>")
--- expand keymaps
-keymap("n", "<cr>", "<cmd>lua require('vscode').action('expand_region')<CR>")
--- project manager keymaps
-keymap("n", "<leader>pa", "<cmd>lua require('vscode').action('projectManager.saveProject')<CR>")
-keymap("n", "<leader>po", "<cmd>lua require('vscode').action('projectManager.listProjectsNewWindow')<CR>")
-keymap("n", "<leader>pe", "<cmd>lua require('vscode').action('projectManager.editProjects')<CR>")
--- dynoFileUtils keymaps
-keymap("n", "<leader>na", "<cmd>lua require('vscode').action('dynoFileUtils.newItems')<CR>")
--- code runner keymaps
-keymap("n", "<leader>cr", "<cmd>lua require('vscode').action('code-runner.run')<CR>")
 -- lsp keymaps
-keymap("n", "K", "<cmd>lua require('vscode-neovim').action('editor.action.showHover')<CR>")
-keymap("n", "gI", "<cmd>lua require('vscode-neovim').action('editor.action.goToImplementation')<CR>")
-keymap("n", "gd", "<cmd>lua require('vscode-neovim').action('editor.action.revealDefinition')<CR>")
-keymap("n", "gD", "<cmd>lua require('vscode-neovim').action('editor.action.revealDeclaration')<CR>")
-keymap("n", "gr", "<cmd>lua require('vscode-neovim').action('editor.action.goToReferences')<CR>")
-keymap("n", "gy", "<cmd>lua require('vscode-neovim').action('editor.action.goToTypeDefinition')<CR>")
 keymap("n", "<Leader>la", "<cmd>lua require('vscode-neovim').action('editor.action.quickFix')<CR>")
-keymap("n", "<Leader>lG", "<cmd>lua require('vscode-neovim').action('workbench.action.showAllSymbols')<CR>")
-keymap("n", "<Leader>lR", "<cmd>lua require('vscode-neovim').action('editor.action.goToReferences')<CR>")
+keymap("n", "<Leader>ll", "<cmd>lua require('vscode-neovim').action('workbench.action.showAllSymbols')<CR>")
+keymap("n", "<Leader>fr", "<cmd>lua require('vscode-neovim').action('editor.action.goToReferences')<CR>")
 keymap("n", "<Leader>lr", "<cmd>lua require('vscode-neovim').action('editor.action.rename')<CR>")
-keymap("n", "<Leader>ls", "<cmd>lua require('vscode-neovim').action('workbench.action.gotoSymbol')<CR>")
-keymap("n", "<Leader>lf", "<cmd>lua require('vscode-neovim').action('editor.action.formatDocument')<CR>")
