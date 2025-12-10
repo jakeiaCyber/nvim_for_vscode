@@ -8,7 +8,6 @@ vim.g.maplocalleader = " "
 vim.opt.clipboard = "unnamedplus"
 -- cmdheight
 vim.opt.cmdheight = 1
-keymap("n", ";", ":")
 -- better indent handling
 keymap("v", "<S-Tab>", "<gv", opts)
 keymap("v", "<Tab>", ">gv", opts)
